@@ -1,9 +1,5 @@
-import Link from "next/link";
 
-
-const BlogsPage = () => {
-
-    const blogs = [
+ const blogs = [
   {
     id: 1,
     title: "Getting Started with JavaScript",
@@ -50,15 +46,20 @@ const BlogsPage = () => {
   }
 ];
 
+const BlogDetailPage = async ({ params }) => {
+    const { blogid } = await params;
+    const blog = blogs.find(blog => blog.id === parseInt(blogid));
+    console.log('show ne params', blog)
     return (
         <div>
-            <h2 className="text-3xl font-bold mb-4">Blogs</h2>
-            {blogs.map(blog => <div key={blog.id}>
-                <h3 className="text-4xl font-bold mb-2">{blog.title}</h3>
-                <Link href={`/blogs/${blog.id}`}>Show details</Link>
-            </div>)}
+            <h4 className="text-3xl">Blog detail coming soon</h4>
+            {blog && <div>
+              <h2 className="text-4xl font-bold mb-2">{blog.title}</h2>
+              <p>{blog.content}</p>
+            
+            </div>}
         </div>
     );
 };
 
-export default BlogsPage;
+export default BlogDetailPage;
