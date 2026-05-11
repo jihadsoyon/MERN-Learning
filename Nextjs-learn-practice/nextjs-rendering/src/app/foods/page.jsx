@@ -15,7 +15,7 @@ const FoodsPage = async () => {
     return (
         <div>
             <h2>Foods: {foods.length}</h2>
-            <div className='grid grid-cols-4 gap-4'>
+            <div className='grid grid-cols-3 gap-4'>
                 {
                     foods.map(food => <FoodCard food={food} key={food.id}></FoodCard>)
                 }
