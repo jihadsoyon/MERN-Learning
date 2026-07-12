@@ -3,7 +3,7 @@ import Photocard from "@/components/Photocard";
 const AllPhotosPage = async() => {
     const res = await fetch('https://mern-learning-phi.vercel.app/data.json');
     const photos = await res.json();
-    console.log(photos)
+    
     return (
         <div>
            <h1 className="text-2xl font-bold m-4">All Photos</h1> 
