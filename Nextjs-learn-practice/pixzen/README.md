@@ -2,7 +2,7 @@
 
 Pixgen is a modern Full-Stack web application built with Next.js 15, designed for showcasing and exploring stunning AI-generated artwork. It features high-quality visuals, multi-category filtering, robust authentication, and dynamic route protections to deliver a seamless user experience.
 
-🚀 **Live Link:** [mern-learning-phi.vercel.app](https://vercel.app)
+🚀 **Live Link:** https://mern-learning-phi.vercel.app/
 
 ---
 
