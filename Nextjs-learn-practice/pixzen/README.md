@@ -84,6 +84,3 @@ The project is configured for continuous delivery via **Vercel CLI**:
    ```
 
 ---
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
