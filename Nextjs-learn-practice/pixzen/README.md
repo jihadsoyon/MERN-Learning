@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎨 Pixgen - AI Art Showcase & Gallery Platform
 
-## Getting Started
+Pixgen is a modern Full-Stack web application built with Next.js 15, designed for showcasing and exploring stunning AI-generated artwork. It features high-quality visuals, multi-category filtering, robust authentication, and dynamic route protections to deliver a seamless user experience.
 
-First, run the development server:
+🚀 **Live Link:** https://mern-learning-phi.vercel.app/
 
+---
+
+## ✨ Features
+
+- **🔐 Route Protection (Middleware-driven):** 
+  - Guests can browse the landing page and view limited gallery listings.
+  - Clicking on an artwork's **View Details** or navigating to the **Profile** section automatically redirects unauthenticated users to the Sign-In page.
+- **🌐 Better-Auth Authentication:** 
+  - Standard Credentials-based **Sign-Up** and **Sign-In** forms with frontend validation.
+  - **Sign In with Google** integration for hassle-free social onboarding.
+  - Secure **Account Linking** to prevent duplicate identity exploits under the same email.
+- **🏷️ Dynamic Category Filtering:** Fully responsive sub-navigation tabs (`Sci-Fi`, `Pixel Art`, `Fantasy`, `Cyberpunk`, etc.) to instantly isolate artwork styles.
+- **👤 Dynamic User Profile:** Authenicated users can view their current metrics, check saved imagery, and dynamically trigger a sleek **Update Profile Modal** to edit biographical tokens like Names or Avatar URLs.
+- **⚡ Performance First:** Powered by Next.js App Router for optimized server-side data fetching and static asset caching.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js 15 (App Router), React, Tailwind CSS, Lucide React Icons
+- **Backend:** Next.js Route Handlers (API Routes)
+- **Database:** MongoDB Atlas (NoSQL) via official Node native drivers
+- **Authentication:** Better-Auth (`better-auth/client` & `better-auth/next-js`)
+- **Hosting/Deployment:** Vercel (Production Build optimized)
+
+---
+
+## ⚙️ Local Installation & Setup
+
+Follow these steps to run **Pixgen** on your local machine:
+
+### 1. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com
+cd MERN-Learning/Nextjs-learn-practice/pixzen
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Setup Environment Variables
+Create a `.env.local` file in the root of the `pixzen` directory and supply the following variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Better-Auth Configuration
+BETTER_AUTH_SECRET=your_generated_random_jwt_secret_string
+BETTER_AUTH_URL=http://localhost:3000
 
-## Learn More
+# Database Connectivity
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xadpulf.mongodb.net/pixzen?appName=Cluster0
 
-To learn more about Next.js, take a look at the following resources:
+# Social Authentication Providers (Google Cloud Console)
+GOOGLE_CLIENT_ID=your_google_oauth_client_://googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Run the Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project is configured for continuous delivery via **Vercel CLI**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Verify Builds Locally:**
+   ```bash
+   npm run build
+   ```
+2. **Push directly to Vercel Production Environment:**
+   ```bash
+   vercel --prod
+   ```
+
+---
