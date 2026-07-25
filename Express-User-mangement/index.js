@@ -19,6 +19,11 @@ app.get('/users', (req, res) => {
     res.send(users);
 })
 
+app.post('/users', (req,  res) => {
+    console.log('Post method is working');
+    res.send('Post method is working');
+})
+
 app.get('/product', (req, res) => {
     res.send('Products are ready');
 })
