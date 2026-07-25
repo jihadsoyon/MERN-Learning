@@ -33,6 +33,7 @@ export default function SignUpPage() {
 
 
         console.log({data, error});
+        
         if(!error){
             router.push('/');
         }
