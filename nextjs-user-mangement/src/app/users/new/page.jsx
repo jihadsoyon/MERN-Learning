@@ -13,6 +13,7 @@ import {
     TextArea,
     TextField,
 } from "@heroui/react";
+import { redirect } from "next/navigation";
 
 const NewUsersPage = () => {
 
@@ -24,7 +25,7 @@ const NewUsersPage = () => {
         console.log(newUser);
 
         //Todo: send a new user data to the server
-      const res = await  fetch('http://localhost:8000/users', {
+      const req = await  fetch('http://localhost:8000/users', {
             method: 'Post',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,8 +33,14 @@ const NewUsersPage = () => {
             body: JSON.stringify(newUser)
 
         })
-        const createUser = await res.json();
-        console.log('created user', createUser);
+
+        const res = await req.json();
+        // console.log('created user', createUser);
+
+        if(res.success){
+        alert("user created successfully");
+        redirect('/users')
+        }
 
     }
 
@@ -69,7 +76,7 @@ const NewUsersPage = () => {
                     <Fieldset.Actions>
                         <Button type="submit">
                             <FloppyDisk />
-                            Save changes
+                            Create User
                         </Button>
                         <Button type="reset" variant="secondary">
                             Cancel
