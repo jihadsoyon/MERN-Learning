@@ -1,7 +1,14 @@
+
+import AllApps from "@/components/Homepage/AllApps";
+import Banner from "@/components/Homepage/Banner";
 import Image from "next/image";
+import { DiVim } from "react-icons/di";
 
 export default function Home() {
   return (
-     <h2 className="bg-amber-500">Hello next.js</h2>
+    <div>
+      <Banner />
+     <AllApps />
+    </div>
   );
 }
