@@ -2,7 +2,7 @@ import React from 'react';
 import logoImg from "@/assets/images/logo.png"
 import { FaGithub } from "react-icons/fa";
 import Image from 'next/image';
-import Link from 'next/link';
+import MyLink from './MyLink';
 
 const Navbar = () => {
 
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <ul className='flex justify-between items-center gap-4'>
                        {
                         navItems.map((item, ind)=> {
-                            return <Link key={ind} href={item.path}>{item.text}</Link>
+                            return <MyLink key={ind} href={item.path}>{item.text}</MyLink>
                         })
                        }
                 </ul>

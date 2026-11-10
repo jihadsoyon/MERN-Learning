@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
 
             <div className="border-t border-base-300 py-4 text-center text-sm opacity-70">
-                © {new Date().getFullYear()} HEROJO. All rights reserved.
+                © 2026 HEROJO. All rights reserved.
             </div>
         </footer>
     );
