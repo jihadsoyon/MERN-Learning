@@ -15,6 +15,10 @@ const Navbar = () => {
         {
             path: "/foodssc",
             text: "Foods SC"
+        },
+        {
+            path: "/foodCCAgain",
+            text: "Foods CC Again"
         }
     ]
 

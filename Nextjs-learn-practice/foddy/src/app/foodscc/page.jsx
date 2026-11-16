@@ -10,10 +10,6 @@ const Home = () => {
     const [searching, setSearching] = useState("");
     const [category, setcategory] = useState("");
     const [searchInput, setSearchInput] = useState("");
-  
-
-
-
 
     const fetchFoods = async (category = "", search = "") => {
         setLoading(true);
@@ -26,8 +22,6 @@ const Home = () => {
     }
 
 
-
-
     useEffect(() => {
         fetchFoods(category, searching)
     }, [searching, category]);
@@ -37,8 +31,7 @@ const Home = () => {
     }
 
     const handleFilter = (e) => {
-        const value= e.target.value
-
+        const value= e.target.value;
         setcategory(value)
     }
 
@@ -64,12 +57,12 @@ const Home = () => {
                     Search
                 </button>
                 <select className='bg-gray-600 text-white px-4 rounded-lg cursor-pointer' onChange={handleFilter} value={category}>
-                    <option>All Categories</option>
-                    <option>Burger</option>
-                    <option>Pizza</option>
-                    <option>Desert</option>
-                    <option>Beverage</option>
-                    <option>Rice</option>
+                    <option value="">All Categories</option>
+                    <option value="burger">Burger</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="desert">Desert</option>
+                    <option value="beverage">Beverage</option>
+                    <option value="rice">Rice</option>
                 </select>
             </div>
             {
