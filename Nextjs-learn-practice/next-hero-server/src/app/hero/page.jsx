@@ -3,9 +3,9 @@ import React from 'react';
 
 const HeroPage = () => {
     return (
-        <div>
-           hero Page 
-           <Button variant='danger'>hero</Button>
+        <div className='m-10'>
+          
+           <Button variant='danger'>Hero</Button>
         </div>
     );
 };
