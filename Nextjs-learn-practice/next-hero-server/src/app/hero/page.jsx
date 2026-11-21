@@ -4,7 +4,6 @@ import React from 'react';
 const HeroPage = () => {
     return (
         <div className='m-10'>
-          
            <Button variant='danger'>Hero</Button>
         </div>
     );
