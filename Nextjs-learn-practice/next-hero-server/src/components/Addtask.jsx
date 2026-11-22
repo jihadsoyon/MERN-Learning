@@ -1,8 +1,10 @@
 "use client";
 import { CirclePlus } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import { ListBox, Select } from "@heroui/react";
 
-const Addtask = () => {
+
+const Addtask = ({ addATask }) => {
     return (
         <div>
             <Modal>
@@ -23,27 +25,89 @@ const Addtask = () => {
                             </Modal.Header>
                             <Modal.Body className="p-6">
                                 <Surface variant="default">
-                                    <form className="flex flex-col gap-4">
-                                        <TextField className="w-full" name="name" type="text" variant="secondary">
-                                            <Label>Name</Label>
-                                            <Input placeholder="Enter your name" />
+                                    <form className="flex flex-col gap-4" action={addATask}>
+                                        <TextField className="w-full" name="title" type="text" variant="secondary">
+                                            <Label>Title</Label>
+                                            <Input placeholder="Enter your task title" />
                                         </TextField>
-                                        <TextField className="w-full" name="email" type="email" variant="secondary">
-                                            <Label>Email</Label>
-                                            <Input placeholder="Enter your email" />
+                                        <Select name="priority" className="w-full " variant="secondary" placeholder="Select Priority">
+                                            <Label>Priority</Label>
+                                            <Select.Trigger>
+                                                <Select.Value />
+                                                <Select.Indicator />
+                                            </Select.Trigger>
+                                            <Select.Popover>
+                                                <ListBox>
+                                                    <ListBox.Item id="High" textValue="High">
+                                                        High
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="Medium" textValue="Medium">
+                                                        Medium
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="Low" textValue="Low">
+                                                        Low
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                </ListBox>
+                                            </Select.Popover>
+                                        </Select>
+                                        <Select name="status" className="w-full " variant="secondary" placeholder="Select Status">
+                                            <Label>Status</Label>
+                                            <Select.Trigger>
+                                                <Select.Value />
+                                                <Select.Indicator />
+                                            </Select.Trigger>
+                                            <Select.Popover>
+                                                <ListBox>
+                                                    <ListBox.Item id="Completed" textValue="Completed">
+                                                        Completed
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="InProgress" textValue="InProgress">
+                                                        In Progress
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="Pending" textValue="Pending">
+                                                        Pending
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                </ListBox>
+                                            </Select.Popover>
+                                        </Select>
+                                        <Select name="category" className="w-full " variant="secondary" placeholder="Select Category">
+                                            <Label>Category</Label>
+                                            <Select.Trigger>
+                                                <Select.Value />
+                                                <Select.Indicator />
+                                            </Select.Trigger>
+                                            <Select.Popover>
+                                                <ListBox>
+                                                    <ListBox.Item id="Learning" textValue="Learning">
+                                                        Learning
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="Career" textValue="Career">
+                                                        Career
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="Development" textValue="Development">
+                                                        Development
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                    <ListBox.Item id="Personal" textValue="Personal">
+                                                        Personal
+                                                        <ListBox.ItemIndicator />
+                                                    </ListBox.Item>
+                                                </ListBox>
+                                            </Select.Popover>
+                                        </Select>
+                                        <TextField className="w-full" name="description" type="text" variant="secondary">
+                                            <Label>Description</Label>
+                                            <Input placeholder="Enter your description" />
                                         </TextField>
-                                        <TextField className="w-full" name="phone" type="tel" variant="secondary">
-                                            <Label>Phone</Label>
-                                            <Input placeholder="Enter your phone number" />
-                                        </TextField>
-                                        <TextField className="w-full" name="company" variant="secondary">
-                                            <Label>Company</Label>
-                                            <Input placeholder="Enter your company name" />
-                                        </TextField>
-                                        <TextField className="w-full" name="message" variant="secondary">
-                                            <Label>Message</Label>
-                                            <Input placeholder="Enter your message" />
-                                        </TextField>
+
                                         <Modal.Footer>
                                             <Button slot="close" variant="secondary">
                                                 Cancel

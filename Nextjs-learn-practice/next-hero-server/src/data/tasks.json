@@ -1,6 +1,6 @@
 [
   {
-    "id": "task-001",
+    "id": "1",
     "title": "Complete React Fundamentals",
     "description": "Study components, props, state, hooks, and component lifecycle.",
     "category": "Learning",
@@ -10,7 +10,7 @@
     "completed": false
   },
   {
-    "id": "task-002",
+    "id": "2",
     "title": "Build Responsive Dashboard",
     "description": "Create a responsive dashboard layout using React and Tailwind CSS.",
     "category": "Development",
@@ -20,7 +20,7 @@
     "completed": false
   },
   {
-    "id": "task-003",
+    "id": "3",
     "title": "Practice JavaScript Problems",
     "description": "Solve five JavaScript problems focusing on arrays, objects, and functions.",
     "category": "Learning",
@@ -30,7 +30,7 @@
     "completed": false
   },
   {
-    "id": "task-004",
+    "id": "4",
     "title": "Update GitHub Profile",
     "description": "Improve GitHub profile README and organize pinned repositories.",
     "category": "Career",
@@ -40,7 +40,7 @@
     "completed": false
   },
   {
-    "id": "task-005",
+    "id": "5",
     "title": "Implement User Authentication",
     "description": "Add secure registration, login, logout, and protected routes.",
     "category": "Development",
@@ -50,7 +50,7 @@
     "completed": false
   },
   {
-    "id": "task-006",
+    "id": "6",
     "title": "Read Next.js Documentation",
     "description": "Learn about server components, client components, and data fetching.",
     "category": "Learning",
@@ -60,7 +60,7 @@
     "completed": true
   },
   {
-    "id": "task-007",
+    "id": "7",
     "title": "Prepare LinkedIn Post",
     "description": "Write an educational post about clean code and software development best practices.",
     "category": "Career",
@@ -70,7 +70,7 @@
     "completed": false
   },
   {
-    "id": "task-008",
+    "id": "8",
     "title": "Practice English Speaking",
     "description": "Record a five-minute video explaining a JavaScript concept in English.",
     "category": "Personal",
@@ -80,7 +80,7 @@
     "completed": false
   },
   {
-    "id": "task-009",
+    "id": "9",
     "title": "Deploy Full-Stack Application",
     "description": "Deploy the frontend and backend, configure environment variables, and test production functionality.",
     "category": "Development",
