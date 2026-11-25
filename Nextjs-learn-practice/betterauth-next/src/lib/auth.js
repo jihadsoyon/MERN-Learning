@@ -4,11 +4,14 @@ import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
 
 const client = new MongoClient(process.env.MONGODB_URI);
-const db = client.db();
+const db = client.db('new-better-auth-db');
 
 
 export const auth = betterAuth({
-    //...
+    emailAndPassword: {
+        enabled: true,
+        // requireEmailVerification: true
+    },
     database: mongodbAdapter(db, {
         client,
     }),

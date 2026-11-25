@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@better-auth/mongo-adapter": "^1.7.27",
+    "@heroui/react": "^3.2.8",
+    "@heroui/styles": "^3.2.8",
     "better-auth": "^1.7.27",
     "mongodb": "^7.9.1",
     "next": "16.4.6",
@@ -17,6 +19,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@gravity-ui/icons": "^2.24.0",
     "@tailwindcss/turbopack": "4.3.3",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
