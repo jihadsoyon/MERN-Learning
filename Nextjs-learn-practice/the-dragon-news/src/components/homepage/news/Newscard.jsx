@@ -24,8 +24,7 @@ const Newscard = ({ n }) => {
                     </div>
                 </div>
                 <div className="card-body p-3">
-                    <h2 className="card-title">{n.title}</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <h2 className="card-title">{n.title}</h2>                    
                     <figure>
                         <Image src={n.image_url} width={300} height={300} alt={n.title} className='w-full' />
                     </figure>
