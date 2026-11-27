@@ -5,10 +5,23 @@ import React from 'react';
 import { FaEye, FaLongArrowAltLeft, FaRegBookmark, FaStar } from 'react-icons/fa';
 import { IoShareSocial } from 'react-icons/io5';
 
+export const generateMetadata = async({params}) => {
+    const {id} = await params
+
+    const news = await getNewsDetailsById(id)
+    console.log(news, "GENERATE NEWS");
+
+      return {
+    title: news.title,
+    description: news.details,
+  }
+
+}
+
 const NewsdetailsPage = async ({ params }) => {
     const { id } = await params;
     const n = await getNewsDetailsById(id);
-    console.log(n);
+    // console.log(n);
     return (
         <div className='w-7/12 mx-auto'>
             <div className="card bg-base-100 shadow-sm">
