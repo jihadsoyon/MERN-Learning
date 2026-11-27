@@ -1,4 +1,5 @@
 import LeftSidebar from '@/components/homepage/news/LeftSidebar';
+import Newscard from '@/components/homepage/news/Newscard';
 import RightSidebar from '@/components/homepage/news/RightSidebar';
 import { getCategories, getNewsByCategoryId } from '@/lib/data';
 import React from 'react';
@@ -23,10 +24,10 @@ const categoryDetails = async ({ params }) => {
                 <h2 className="font-semibold">All news</h2>
                 {news.length > 0 ? 
                     news.map(n => {
-                        return <p key={n._id}>{n.details}</p>
+                        return <Newscard key={n._id} n={n}/>
                     })  : <div className='flex-col h-[30vh] flex items-center justify-center text-center bg-gray-100'>
                         <span className="text-8xl text-gray-300"><GiEmptyHourglass /></span>
-                        <h4 className=' text-gray-400 '>Now news found</h4>
+                        <h4 className=' text-gray-400 '>No news found</h4>
                     </div>
                 }
             </div>
